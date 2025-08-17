@@ -37,7 +37,6 @@
       <!-- Footer centrado -->
       <div id="unity-footer" class="flex flex-col items-center mt-4 space-y-2">
         <div id="unity-logo-title-footer"></div>
-        <div id="unity-fullscreen-button" class="cursor-pointer bg-gray-200 px-4 py-2 rounded"></div>
         <div id="unity-build-title" class="text-lg font-semibold">Real Fighters</div>
       </div>
     </div>
@@ -99,9 +98,7 @@
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           document.querySelector("#unity-loading-bar").style.display = "none";
-          document.querySelector("#unity-fullscreen-button").onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
+          // Botón fullscreen eliminado, ya no hace falta
         }).catch((message) => { alert(message); });
       };
       document.body.appendChild(script);
