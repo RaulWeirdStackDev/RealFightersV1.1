@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | Real Fighters</title>
+    <title>Real Fighters</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <!-- Tailwind CDN -->
@@ -26,19 +26,12 @@
       <canvas id="unity-canvas" width="960" height="450" tabindex="-1"></canvas>
 
       <div id="unity-loading-bar" class="w-full max-w-xl mt-4">
-        <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
 
       <div id="unity-warning" class="mt-2"></div>
-
-      <!-- Footer centrado -->
-      <div id="unity-footer" class="flex flex-col items-center mt-4 space-y-2">
-        <div id="unity-logo-title-footer"></div>
-        <div id="unity-build-title" class="text-lg font-semibold">Real Fighters</div>
-      </div>
     </div>
 
     <script>
@@ -98,7 +91,6 @@
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           document.querySelector("#unity-loading-bar").style.display = "none";
-          // Botón fullscreen eliminado, ya no hace falta
         }).catch((message) => { alert(message); });
       };
       document.body.appendChild(script);
